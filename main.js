@@ -52,7 +52,7 @@ class Timer {
 
     createOutSign() {
         this.out = document.createElement('div');
-        this.out.innerHTML = "Timer Out";
+        this.out.innerHTML = "Time Over";
         this.out.classList.add('out-sign');
 
         return this.out;
