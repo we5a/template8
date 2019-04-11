@@ -116,3 +116,10 @@ body {
     }
 
 }
+
+@media screen and (max-width: 500px){
+    .out-sign {
+        right: 2%;
+        font-size: 1.7em;
+    }
+}
