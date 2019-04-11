@@ -88,11 +88,9 @@ class Timer {
         this.interval = setInterval(() => {
             this.countObject = new Date(this.countObject.valueOf() - this.updateInterval);
             let date = this.parseDateObj(this.countObject);
-            const allWidth = Math.round(container.offsetWidth * 0.853);
-            const currentWidht = this.bar.offsetWidth;
             const percent = (this.countObject.valueOf() / this.msDate).toFixed(6);
 
-            this.bar.style.width = allWidth * percent + 'px';
+             this.bar.style.width = 100 * percent + '%';
 
             if (this.countObject.valueOf() < 0) {
                 clearInterval(this.interval);
@@ -104,9 +102,8 @@ class Timer {
                 this.countDown.innerHTML = `${date.hours}:${date.min}:${date.sec}`;
 
                 if (this.sign) this.sign.remove();
-
-                this.bar.style.width = allWidth + 'px';
-
+              
+                this.bar.style.width = 100 + '%';
                 this.out = this.createOutSign();
                 this.timer.append(this.out);
 
